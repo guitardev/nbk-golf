@@ -1,0 +1,192 @@
+{
+    "common": {
+        "save": "บันทึก",
+        "cancel": "ยกเลิก",
+        "delete": "ลบ",
+        "edit": "แก้ไข",
+        "add": "เพิ่ม",
+        "search": "ค้นหา",
+        "loading": "กำลังโหลด...",
+        "error": "ข้อผิดพลาด",
+        "success": "สำเร็จ",
+        "confirm": "ยืนยัน",
+        "close": "ปิด",
+        "actions": "การดำเนินการ"
+    },
+    "nav": {
+        "dashboard": "แดชบอร์ด",
+        "leaderboard": "ลีดเดอร์บอร์ด",
+        "players": "ผู้เล่น",
+        "courses": "สนามกอล์ฟ",
+        "tournaments": "ทัวร์นาเมนต์",
+        "registrations": "การลงทะเบียน",
+        "register": "ลงทะเบียน",
+        "logout": "ออกจากระบบ"
+    },
+    "dashboard": {
+        "title": "แดชบอร์ด",
+        "welcome": "ยินดีต้อนรับกลับมา, {name}!",
+        "welcomeGuest": "ยินดีต้อนรับสู่ NBK Golf!",
+        "stats": {
+            "totalPlayers": "ผู้เล่นทั้งหมด",
+            "activeCourses": "สนามที่ใช้งาน",
+            "tournaments": "ทัวร์นาเมนต์",
+            "pendingRegistrations": "รอการชำระเงิน"
+        },
+        "recentRegistrations": "การลงทะเบียนล่าสุด",
+        "quickActions": "เมนูด่วน",
+        "addNewPlayer": "เพิ่มผู้เล่นใหม่",
+        "createTournament": "สร้างทัวร์นาเมนต์",
+        "manageCourses": "จัดการสนาม",
+        "noRecentRegistrations": "ไม่มีการลงทะเบียนล่าสุด",
+        "participantMessage": "คุณเข้าสู่ระบบในฐานะผู้เข้าร่วม ตรวจสอบทัวร์นาเมนต์ที่กำลังจะมาถึงเพื่อลงทะเบียน",
+        "registerForTournament": "ลงทะเบียนทัวร์นาเมนต์"
+    },
+    "players": {
+        "title": "จัดการผู้เล่น",
+        "addNew": "เพิ่มผู้เล่นใหม่",
+        "editPlayer": "แก้ไขผู้เล่น",
+        "deletePlayer": "ลบผู้เล่น",
+        "confirmDelete": "คุณแน่ใจหรือไม่ที่จะลบ {name}?",
+        "playerDeleted": "ลบผู้เล่นสำเร็จ",
+        "playerUpdated": "อัปเดตผู้เล่นสำเร็จ",
+        "playerAdded": "เพิ่มผู้เล่นสำเร็จ",
+        "fields": {
+            "name": "ชื่อ",
+            "handicap": "แฮนดิแคป",
+            "team": "ทีม",
+            "lineUserId": "Line User ID"
+        },
+        "noPlayers": "ไม่พบผู้เล่น"
+    },
+    "courses": {
+        "title": "จัดการสนามกอล์ฟ",
+        "addNew": "เพิ่มสนามใหม่",
+        "editCourse": "แก้ไขสนาม",
+        "deleteCourse": "ลบสนาม",
+        "confirmDelete": "คุณแน่ใจหรือไม่ที่จะลบ {name}?",
+        "courseDeleted": "ลบสนามสำเร็จ",
+        "courseUpdated": "อัปเดตสนามสำเร็จ",
+        "courseAdded": "เพิ่มสนามสำเร็จ",
+        "fields": {
+            "name": "ชื่อสนาม",
+            "pars": "พาร์ (18 หลุม)",
+            "distances": "ระยะทาง (18 หลุม)"
+        },
+        "noCourses": "ไม่พบสนาม",
+        "holes": "หลุม"
+    },
+    "tournaments": {
+        "title": "จัดการทัวร์นาเมนต์",
+        "addNew": "สร้างทัวร์นาเมนต์",
+        "editTournament": "แก้ไขทัวร์นาเมนต์",
+        "deleteTournament": "ลบทัวร์นาเมนต์",
+        "confirmDelete": "คุณแน่ใจหรือไม่ที่จะลบ {name}?",
+        "tournamentDeleted": "ลบทัวร์นาเมนต์สำเร็จ",
+        "tournamentUpdated": "อัปเดตทัวร์นาเมนต์สำเร็จ",
+        "tournamentAdded": "สร้างทัวร์นาเมนต์สำเร็จ",
+        "playerAdded": "เพิ่มผู้เล่นสำเร็จ",
+        "fields": {
+            "name": "ชื่อทัวร์นาเมนต์",
+            "date": "วันที่",
+            "course": "สนาม",
+            "status": "สถานะ"
+        },
+        "status": {
+            "upcoming": "กำลังจะมาถึง",
+            "active": "กำลังดำเนินการ",
+            "completed": "เสร็จสิ้น"
+        },
+        "noTournaments": "ไม่พบทัวร์นาเมนต์",
+        "backToTournaments": "กลับไปที่ทัวร์นาเมนต์",
+        "selectPlayer": "เลือกผู้เล่น",
+        "addPlayer": "เพิ่มผู้เล่น",
+        "player": "ผู้เล่น",
+        "total": "รวม",
+        "noPlayersAdded": "ยังไม่มีผู้เล่น",
+        "notFound": "ไม่พบทัวร์นาเมนต์"
+    },
+    "leaderboard": {
+        "title": "ลีดเดอร์บอร์ด",
+        "gross": "Gross",
+        "net": "Net",
+        "pos": "อันดับ",
+        "player": "ผู้เล่น",
+        "thru": "หลุม",
+        "total": "รวม",
+        "hcp": "แฮนดิแคป",
+        "loading": "กำลังโหลด...",
+        "noScores": "ยังไม่มีคะแนนบันทึก",
+        "averageGross": "ค่าเฉลี่ย Gross",
+        "averageNet": "ค่าเฉลี่ย Net",
+        "totalPlayers": "ผู้เล่นทั้งหมด"
+    },
+    "registrations": {
+        "title": "จัดการการลงทะเบียน",
+        "updateStatus": "อัปเดตสถานะ",
+        "deleteRegistration": "ลบการลงทะเบียน",
+        "confirmDelete": "คุณแน่ใจหรือไม่ที่จะลบการลงทะเบียนนี้?",
+        "registrationDeleted": "ลบการลงทะเบียนสำเร็จ",
+        "registrationUpdated": "อัปเดตการลงทะเบียนสำเร็จ",
+        "fields": {
+            "playerName": "ชื่อผู้เล่น",
+            "email": "อีเมล",
+            "phone": "เบอร์โทรศัพท์",
+            "tournament": "ทัวร์นาเมนต์",
+            "status": "สถานะ"
+        },
+        "status": {
+            "pending": "รอชำระเงิน",
+            "paid": "ชำระแล้ว"
+        },
+        "noRegistrations": "ไม่พบการลงทะเบียน",
+        "filterByTournament": "กรองตามทัวร์นาเมนต์",
+        "allTournaments": "ทัวร์นาเมนต์ทั้งหมด"
+    },
+    "register": {
+        "title": "ลงทะเบียนทัวร์นาเมนต์",
+        "subtitle": "เข้าร่วมกิจกรรมที่กำลังจะมาถึง",
+        "selectTournament": "เลือกทัวร์นาเมนต์",
+        "playerInfo": "ข้อมูลผู้เล่น",
+        "submit": "ลงทะเบียนทันที",
+        "submitting": "กำลังลงทะเบียน...",
+        "success": "ลงทะเบียนสำเร็จ!",
+        "successMessage": "ขอบคุณสำหรับการลงทะเบียน เราจะติดต่อคุณกลับโดยเร็วที่สุดพร้อมรายละเอียดการชำระเงิน",
+        "registerAnother": "ลงทะเบียนเพิ่ม",
+        "error": "การลงทะเบียนล้มเหลว กรุณาลองอีกครั้ง",
+        "noTournaments": "ไม่มีทัวร์นาเมนต์ที่กำลังจะมาถึง",
+        "loading": "กำลังโหลด...",
+        "fields": {
+            "tournament": "เลือกทัวร์นาเมนต์",
+            "name": "ชื่อ-นามสกุล",
+            "email": "อีเมล",
+            "phone": "เบอร์โทรศัพท์",
+            "lineId": "Line ID (ไม่บังคับ)"
+        }
+    },
+    "profile": {
+        "title": "โปรไฟล์ของฉัน",
+        "editProfile": "แก้ไขโปรไฟล์",
+        "completeProfile": "กรอกข้อมูลโปรไฟล์",
+        "updateInfo": "อัปเดตข้อมูลส่วนตัวและแฮนดิแคปของคุณ",
+        "provideDetails": "กรุณากรอกข้อมูลเพื่อเข้าสู่แดชบอร์ด",
+        "fields": {
+            "name": "ชื่อ-นามสกุล",
+            "email": "อีเมล",
+            "phone": "เบอร์โทรศัพท์",
+            "handicap": "แฮนดิแคป",
+            "team": "ทีม (ไม่บังคับ)"
+        },
+        "save": "บันทึกการเปลี่ยนแปลง",
+        "createProfile": "สร้างโปรไฟล์และดำเนินการต่อ",
+        "saving": "กำลังบันทึก...",
+        "success": "อัปเดตโปรไฟล์สำเร็จ!",
+        "error": "ไม่สามารถอัปเดตโปรไฟล์ได้ กรุณาลองอีกครั้ง"
+    },
+    "auth": {
+        "login": "เข้าสู่ระบบด้วย Line",
+        "loginRequired": "กรุณาเข้าสู่ระบบเพื่อดำเนินการต่อ",
+        "adminOnly": "ต้องการสิทธิ์ผู้ดูแลระบบ",
+        "checkingPermissions": "กำลังตรวจสอบสิทธิ์..."
+    }
+}

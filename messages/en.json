@@ -1,0 +1,191 @@
+{
+    "common": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "add": "Add",
+        "search": "Search",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "confirm": "Confirm",
+        "close": "Close",
+        "actions": "Actions"
+    },
+    "nav": {
+        "dashboard": "Dashboard",
+        "leaderboard": "Leaderboard",
+        "players": "Players",
+        "courses": "Courses",
+        "tournaments": "Tournaments",
+        "registrations": "Registrations",
+        "register": "Register",
+        "logout": "Logout"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "welcome": "Welcome back, {name}!",
+        "welcomeGuest": "Welcome to NBK Golf!",
+        "stats": {
+            "totalPlayers": "Total Players",
+            "activeCourses": "Active Courses",
+            "tournaments": "Tournaments",
+            "pendingRegistrations": "Pending Registrations"
+        },
+        "recentRegistrations": "Recent Registrations",
+        "quickActions": "Quick Actions",
+        "addNewPlayer": "Add New Player",
+        "createTournament": "Create Tournament",
+        "manageCourses": "Manage Courses",
+        "noRecentRegistrations": "No recent registrations",
+        "participantMessage": "You are logged in as a participant. Check upcoming tournaments to register.",
+        "registerForTournament": "Register for Tournament"
+    },
+    "players": {
+        "title": "Players Management",
+        "addNew": "Add New Player",
+        "editPlayer": "Edit Player",
+        "deletePlayer": "Delete Player",
+        "confirmDelete": "Are you sure you want to delete {name}?",
+        "playerDeleted": "Player deleted successfully",
+        "playerUpdated": "Player updated successfully",
+        "playerAdded": "Player added successfully",
+        "fields": {
+            "name": "Name",
+            "handicap": "Handicap",
+            "team": "Team",
+            "lineUserId": "Line User ID"
+        },
+        "noPlayers": "No players found"
+    },
+    "courses": {
+        "title": "Courses Management",
+        "addNew": "Add New Course",
+        "editCourse": "Edit Course",
+        "deleteCourse": "Delete Course",
+        "confirmDelete": "Are you sure you want to delete {name}?",
+        "courseDeleted": "Course deleted successfully",
+        "courseUpdated": "Course updated successfully",
+        "courseAdded": "Course added successfully",
+        "fields": {
+            "name": "Course Name",
+            "pars": "Pars (18 holes)",
+            "distances": "Distances (18 holes)"
+        },
+        "noCourses": "No courses found",
+        "holes": "Holes"
+    },
+    "tournaments": {
+        "title": "Tournaments Management",
+        "addNew": "Create Tournament",
+        "editTournament": "Edit Tournament",
+        "deleteTournament": "Delete Tournament",
+        "confirmDelete": "Are you sure you want to delete {name}?",
+        "tournamentDeleted": "Tournament deleted successfully",
+        "tournamentUpdated": "Tournament updated successfully",
+        "tournamentAdded": "Tournament created successfully",
+        "playerAdded": "Player added successfully",
+        "fields": {
+            "name": "Tournament Name",
+            "date": "Date",
+            "course": "Course",
+            "status": "Status"
+        },
+        "status": {
+            "upcoming": "Upcoming",
+            "active": "Active",
+            "completed": "Completed"
+        },
+        "noTournaments": "No tournaments found",
+        "backToTournaments": "Back to Tournaments",
+        "selectPlayer": "Select Player",
+        "addPlayer": "Add Player",
+        "player": "Player",
+        "total": "Total",
+        "noPlayersAdded": "No players added yet",
+        "notFound": "Tournament not found"
+    },
+    "leaderboard": {
+        "title": "Leaderboard",
+        "gross": "Gross",
+        "net": "Net",
+        "pos": "Pos",
+        "player": "Player",
+        "thru": "Thru",
+        "total": "Total",
+        "hcp": "Hcp",
+        "loading": "Loading...",
+        "noScores": "No scores recorded yet.",
+        "averageGross": "Average Gross",
+        "averageNet": "Average Net"
+    },
+    "registrations": {
+        "title": "Registrations Management",
+        "updateStatus": "Update Status",
+        "deleteRegistration": "Delete Registration",
+        "confirmDelete": "Are you sure you want to delete this registration?",
+        "registrationDeleted": "Registration deleted successfully",
+        "registrationUpdated": "Registration updated successfully",
+        "fields": {
+            "playerName": "Player Name",
+            "email": "Email",
+            "phone": "Phone",
+            "tournament": "Tournament",
+            "status": "Status"
+        },
+        "status": {
+            "pending": "Pending",
+            "paid": "Paid"
+        },
+        "noRegistrations": "No registrations found",
+        "filterByTournament": "Filter by Tournament",
+        "allTournaments": "All Tournaments"
+    },
+    "register": {
+        "title": "Tournament Registration",
+        "subtitle": "Join our upcoming events",
+        "selectTournament": "Select Tournament",
+        "playerInfo": "Player Information",
+        "submit": "Register Now",
+        "submitting": "Registering...",
+        "success": "Registration Successful!",
+        "successMessage": "Thank you for registering. We will contact you shortly with payment details.",
+        "registerAnother": "Register Another",
+        "error": "Registration failed. Please try again.",
+        "noTournaments": "No upcoming tournaments",
+        "loading": "Loading...",
+        "fields": {
+            "tournament": "Select Tournament",
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "lineId": "Line ID (Optional)"
+        }
+    },
+    "profile": {
+        "title": "My Profile",
+        "editProfile": "Edit Profile",
+        "completeProfile": "Complete Your Profile",
+        "updateInfo": "Update your personal information and handicap.",
+        "provideDetails": "Please provide your details to continue to the dashboard.",
+        "fields": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "handicap": "Handicap",
+            "team": "Team (Optional)"
+        },
+        "save": "Save Changes",
+        "createProfile": "Create Profile & Continue",
+        "saving": "Saving...",
+        "success": "Profile updated successfully!",
+        "error": "Failed to update profile. Please try again."
+    },
+    "auth": {
+        "login": "Login with Line",
+        "loginRequired": "Please login to continue",
+        "adminOnly": "Admin access required",
+        "checkingPermissions": "Checking permissions..."
+    }
+}
