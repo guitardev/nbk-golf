@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
 import { isAdminUser } from '@/lib/admin';
 import { Player } from '@/lib/googleSheets'; // We can import the type, but not the db logic
 
@@ -23,10 +24,9 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-    const [user, setUser] = useState<UserProfile | null>(null);
+    const { data: session, status } = useSession();
     const [memberProfile, setMemberProfile] = useState<Player | null>(null);
     const [isAdmin, setIsAdmin] = useState(false);
-    const [isLoading, setIsLoading] = useState(true);
 
     const fetchMemberProfile = async (lineUserId: string) => {
         try {
@@ -45,63 +45,44 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
 
     useEffect(() => {
-        // Check for existing session
-        const storedUser = localStorage.getItem("line_user");
-        if (storedUser) {
-            const parsedUser = JSON.parse(storedUser);
-            setUser(parsedUser);
-            refreshAdminStatus(parsedUser.userId);
-            fetchMemberProfile(parsedUser.userId);
+        if (session?.user?.id) {
+            fetchMemberProfile(session.user.id);
+            // Check admin status from session role
+            setIsAdmin(session.user.role === 'admin');
+        } else {
+            setMemberProfile(null);
+            setIsAdmin(false);
         }
-        setIsLoading(false);
-    }, []);
-
-    const checkAdmin = (userId: string) => {
-        setIsAdmin(isAdminUser(userId));
-    };
-    const refreshAdminStatus = (userId: string) => {
-        setIsAdmin(isAdminUser(userId));
-    };
+    }, [session]);
 
     const login = () => {
-        // Redirect to Line Login URL
-        const clientID = process.env.NEXT_PUBLIC_LINE_CHANNEL_ID;
-        const redirectURI = encodeURIComponent(`${window.location.origin}/api/auth/callback/line`);
-        const state = "random_string"; // Should be generated randomly
-        const scope = "profile openid";
-
-        // For now, we'll just simulate login for development if no env vars
-        if (!clientID) {
-            console.warn("Line Client ID not found. Simulating login.");
-            // Simulate Admin User for demo purposes if ID is "123"
-            // Change ID to test non-admin: "user456"
-            const mockUser = { userId: "123", displayName: "แอดมินสนาม" };
-            setUser(mockUser);
-            checkAdmin(mockUser.userId);
-            localStorage.setItem("line_user", JSON.stringify(mockUser));
-            fetchMemberProfile(mockUser.userId);
-            return;
-        }
-
-        const loginUrl = `https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=${clientID}&redirect_uri=${redirectURI}&state=${state}&scope=${scope}`;
-        window.location.href = loginUrl;
+        signIn("line");
     };
 
     const logout = () => {
-        setUser(null);
-        setMemberProfile(null);
-        setIsAdmin(false);
-        localStorage.removeItem("line_user");
+        signOut();
     };
 
     const refreshProfile = async () => {
-        if (user) {
-            await fetchMemberProfile(user.userId);
+        if (session?.user?.id) {
+            await fetchMemberProfile(session.user.id);
         }
     };
 
     return (
-        <AuthContext.Provider value={{ user, memberProfile, isAdmin, login, logout, isLoading, refreshProfile }}>
+        <AuthContext.Provider value={{
+            user: session?.user ? {
+                userId: session.user.id,
+                displayName: session.user.name || '',
+                pictureUrl: session.user.image || undefined
+            } : null,
+            memberProfile,
+            isAdmin,
+            login,
+            logout,
+            isLoading: status === "loading",
+            refreshProfile
+        }}>
             {children}
         </AuthContext.Provider>
     );

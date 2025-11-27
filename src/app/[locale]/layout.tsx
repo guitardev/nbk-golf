@@ -5,6 +5,7 @@ import { locales } from '../../i18n';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import '../globals.css';
 import { AuthProvider } from "@/contexts/AuthContext";
+import { SessionProvider } from "next-auth/react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -38,32 +39,34 @@ export default async function LocaleLayout({
     return (
         <html lang={locale} suppressHydrationWarning>
             <body>
-                <AuthProvider>
-                    <NextIntlClientProvider messages={messages} locale={locale}>
-                        <div className="min-h-screen bg-gray-50">
-                            {/* Navigation Header */}
-                            <nav className="bg-white shadow-sm border-b border-gray-200">
-                                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                    <div className="flex justify-between items-center h-16">
-                                        <div className="flex items-center">
-                                            <h1 className="text-xl font-bold text-emerald-600">
-                                                NBK Golf
-                                            </h1>
-                                        </div>
-                                        <div className="flex items-center gap-4">
-                                            <LanguageSwitcher />
+                <SessionProvider>
+                    <AuthProvider>
+                        <NextIntlClientProvider messages={messages} locale={locale}>
+                            <div className="min-h-screen bg-gray-50">
+                                {/* Navigation Header */}
+                                <nav className="bg-white shadow-sm border-b border-gray-200">
+                                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                        <div className="flex justify-between items-center h-16">
+                                            <div className="flex items-center">
+                                                <h1 className="text-xl font-bold text-emerald-600">
+                                                    NBK Golf
+                                                </h1>
+                                            </div>
+                                            <div className="flex items-center gap-4">
+                                                <LanguageSwitcher />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </nav>
+                                </nav>
 
-                            {/* Main Content */}
-                            <main>
-                                {children}
-                            </main>
-                        </div>
-                    </NextIntlClientProvider>
-                </AuthProvider>
+                                {/* Main Content */}
+                                <main>
+                                    {children}
+                                </main>
+                            </div>
+                        </NextIntlClientProvider>
+                    </AuthProvider>
+                </SessionProvider>
             </body>
         </html>
     );
